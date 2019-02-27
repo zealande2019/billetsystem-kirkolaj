@@ -11,7 +11,7 @@ namespace TestDLLBilletLibrary
             //Arrange 
             Bil bil = new Bil();
             //Act
-            decimal pris = bil.pris();
+            decimal pris = bil.Pris();
             //Assert
             Assert.AreEqual(240, pris );
 
@@ -26,7 +26,7 @@ namespace TestDLLBilletLibrary
             //Arrange
             Bil bil = new Bil();
             //Act
-            string køretøj = bil.køretøjer();
+            string køretøj = bil.KøretøjStatus();
             //Assert
             Assert.AreEqual("Bil", køretøj);
         }
@@ -52,7 +52,7 @@ namespace TestDLLBilletLibrary
             //Arrange
             MC mc = new MC();
             //Act
-            string køretøj = mc.køretøj();
+            string køretøj = mc.KøretøjStatus();
             //Assert
             Assert.AreEqual("MC", køretøj);
         }
