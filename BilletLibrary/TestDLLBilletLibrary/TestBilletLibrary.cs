@@ -1,3 +1,5 @@
+using System;
+using System.Net.Sockets;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using BilletLibrary;
 namespace TestDLLBilletLibrary
@@ -55,6 +57,18 @@ namespace TestDLLBilletLibrary
             string køretøj = mc.KøretøjStatus();
             //Assert
             Assert.AreEqual("MC", køretøj);
+        }
+
+        [TestMethod()]
+        [ExpectedException(typeof(ArgumentException))]
+        public void TestNummerpladeForLang()
+        {
+            //Arrange
+            Køretøj køretøj = new Bil(); 
+            //Act
+            køretøj.Nummerplade = "123456789";
+            //Assert
+            Assert.Fail();
         }
     }
 }
